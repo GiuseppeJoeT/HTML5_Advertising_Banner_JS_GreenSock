@@ -1,2 +1,5 @@
 # HTML5_Advertising_Banner_JS_GreenSock
-A complete HTML5 animated banner Advertising
+
+This project combines the GreenSock Animation Platform (GSAP) with
+HTML, CSS, and a sprite sheet graphic, to create a complete animated
+banner ad.
