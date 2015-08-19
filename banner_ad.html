@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>GSAP animation</title>
+		<style type="text/css">
+			@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+			body { padding: 10px; font-family: 'Open Sans', sans-serif; }
+			
+			a#myAdLink { display: inline-block; background-color:#2480d6; }
+			
+			#myAd { width: 650px; height: 200px; position:relative; overflow: hidden; }
+			
+			#myAd .myAd_Img { position: absolute; background: url(graphics.png) no-repeat 0px 0px; }
+			/* 0px (x position) 0px (y position) */
+			#myAd #myAd_clouds { width: inherit; height: inherit; top: 0px; left:0px; }
+			
+			#myAd #myAd_photo { width: inherit; height: 143px; background-position: 0px -325px; bottom: 0px; left: 0px;}
+			
+			#myAd #myAd_txt1,
+			#myAd #myAd_txt2 { position: absolute; width: inherit; text-align: center; color:#ffffff;
+							   font-size:3.0em; top:0px; left:0px; text-transform:uppercase; 
+							   text-shadow: 0px 3px 3px	rgba(0 ,0, 102, 0.5); }
+			
+			#myAd #myAd_marker { width: 60px; height: 95px; background-position: -243px -230px; top:90px; left:290px; }
+			
+			#myAd #myAd_shadow { width:35px; height:16px; background-position: -311px -236px; top:175px; left: 306px; }
+			
+			#myAd #myAd_txt3 { width:510px; height:28px; background-position: -2px -202px; top:58px; left: 73px;}
+			
+			#myAd #myAd_surfboard { width:237px; height:62px; background-position: -2px -233px; top:110px; left: 390px; }
+							   
+		</style>
+	</head>
+	<body>
+		
+        <a id="myAdLink" href="http://www.tiberiwebdesign.com/">
+        
+			<div id="myAd">
+                <div class="myAd_Img" id="myAd_clouds"></div>
+                <div class="myAd_Img" id="myAd_photo"></div>
+                
+                <div id="myAd_txt1">Feeling stressed?</div>
+                <div id="myAd_txt2">you could be here!</div>   
+                
+                <div class="myAd_Img" id="myAd_shadow"></div>
+                <div class="myAd_Img" id="myAd_txt3"></div>
+                <div class="myAd_Img" id="myAd_marker"></div>
+                <div class="myAd_Img" id="myAd_surfboard"></div>                  
+            </div>
+        </a>
+        
+
+        <script type="text/javascript" src="TweenMax.min.js"></script>
+ <!-- TweenMax is an extremely fast, lightweight, and flexible animation tool that serves as the foundation of the GreenSock Animation Platform (GSAP). -->        
+        <script type="text/javascript">
+			
+			(function(){
+				
+				var tl1 = new TimelineMax();
+				
+				tl1.from('#myAd_txt2', 2.5, { top: -100, ease: Power2.easeOut })
+				.to('#myAd_txt1', 2.5, { top: 210, ease: Power2.easeOut }, '-=1.2');
+			
+			}());
+		
+		
+		</script>
+        
+	</body>
+</html>
