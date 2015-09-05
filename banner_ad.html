@@ -61,6 +61,9 @@
 				
 				tl1.from('#myAd_txt2', 2.5, { top: -100, ease: Power2.easeOut })
 				.to('#myAd_txt1', 2.5, { top: 210, ease: Power2.easeOut }, '-=1.2');
+				.from('#myAd_marker', 2.8, { top: -110, ease: Bounce.easeOut }, '-=.9')
+				.from('#myAd_shadow', 2.7, { opacity: 0, ease: Bounce.easeOut }, '-=1.9')
+				.from('#myAd_txt3', 2.8, { scale: .2, ease: Power2.easeOut }, '-=.9');
 			
 			}());
 		
